@@ -1,355 +1,121 @@
-<!-- Chosen Palette: 學習者導向配色 (Background: Light Gray/White, Main Title: Deep Blue, Section Title: Orange-Red, Sub-Header: Teal, Emphasis: Purple/Yellow Highlight) -->
-<!-- Application Structure Plan: 靜態、單頁、長滾動文件 (Long-scroll document)。所有圖卡內容按順序顯示，移除互動性和 JavaScript。 -->
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 應用與策略規劃 (L21) 終極強化講義 - 靜態版</title>
-    <!-- 載入 Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 載入 MathJax 以優美地渲染 LaTeX 公式 -->
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        /* 自定義顏色和樣式以模擬顏色區分 */
-        .color-main-title { color: #2c3e50; /* Deep Blue */ }
-        .color-section-title { color: #e74c3c; /* Orange-Red */ }
-        .color-sub-header { color: #00796b; /* Teal */ }
-        .table-header-bg { background-color: #f1f2f6; /* Light Blue-Gray */ }
-        .formula-bg { background-color: #ecf0f1; /* Extra Light Gray for formula block */ }
-        .key-emphasis { color: #8e44ad; /* Dark Purple for important text */ font-weight: 700; }
-        .key-highlight-bg { background-color: #fce8a8; /* Light Yellow for highlight */ }
-        
-        body { font-family: 'Inter', 'Microsoft JhengHei', Arial, sans-serif; }
-        
-        /* 確保表格內的文字可讀性 */
-        .data-table td, .data-table th {
-            padding: 12px 16px;
-            text-align: left;
-            border-bottom: 1px solid #e0e0e0;
-            line-height: 1.6;
-        }
-
-        /* 確保公式渲染居中 */
-        .formula-bg mjx-container {
-            display: block;
-            margin: 10px auto;
-        }
-        
-        /* 確保內容區域的寬度，讓文件更容易閱讀 */
-        main {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>iPAS AI應用規劃師 中級學習路徑</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.6;
+      margin: 40px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      font-size: 2em;
+      color: #005a9e;
+    }
+    h2 {
+      font-size: 1.5em;
+      margin-top: 30px;
+      color: #0078d4;
+    }
+    h3 {
+      margin-top: 20px;
+      color: #333;
+    }
+    .section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: #fff;
+      border-left: 5px solid #0078d4;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .link-card {
+      margin-top: 10px;
+    }
+    a {
+      display: inline-block;
+      margin-right: 20px;
+      padding: 10px 15px;
+      background-color: #0078d4;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    a:hover {
+      background-color: #005a9e;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 p-6 md:p-8 min-h-screen">
+<body>
 
-    <!-- 主內容區 (Main Content Area) -->
-    <main class="max-w-6xl mx-auto">
-        <header class="mb-10 text-center border-b-4 border-red-400 pb-4">
-            <h1 class="text-5xl font-extrabold color-main-title mb-2">AI 應用與策略規劃 (L21) 終極強化講義</h1>
-            <p class="text-gray-500 text-lg">本講義專為應對考試中的應用與情境題而設計，內容已深度強化、包含公式及延伸知識。</p>
-        </header>
+  <h1>iPAS AI應用規劃師<br>中級學習路徑</h1>
 
-        <!-- 圖卡 #1 內容 -->
-        <section id="card1" class="bg-white p-6 rounded-xl shadow-xl mb-10">
-            <h2 class="text-3xl font-bold color-section-title border-b-2 border-red-300 pb-3 mb-6">🚀 圖卡 #1：AI 基礎判斷與 NLP 應用深度</h2>
+  <!-- 階段一 -->
+  <div class="section">
+    <h2>階段一</h2>
+    <h3>Gemini版核心學習目標</h3>
+    <p>掌握 NLP、CV、生成式 AI 的應用方向；學習 AI 專案的可行性評估與風險管理。</p>
+    <h3>Copilot版核心學習目標</h3>
+    <p>掌握 AI 核心技術與應用場景，建立技術辨識能力：NLP（Tokenization、Word2Vec、情緒分析）、CV（CNN、Object Detection）、生成式 AI（Transformer、AutoML）、多模態 AI（Early Fusion）。</p>
+    <div class="link-card">
+      <a href="iPAS-Part1.html" target="_blank">Gemini 版圖卡</a>
+      <a href="Copilot-iPAS-Part1.html" target="_blank">Copilot 版圖卡</a>
+    </div>
+  </div>
 
-            <h3 class="text-2xl font-semibold color-sub-header mt-8 mb-4">🧠 1. AI vs. 傳統程式：邊界與技術判斷</h3>
-            <p class="text-gray-600 mb-4">本節聚焦於判斷給定情境是屬於基於學習的 AI 系統，還是基於固定規則的傳統系統，這是情境題的常見考點。</p>
+  <!-- 階段二 -->
+  <div class="section">
+    <h2>階段二</h2>
+    <h3>Gemini版核心學習目標</h3>
+    <p>掌握缺值處理、特徵縮放（標準化/正規化）；補足機率統計、線性代數、梯度下降的理論基礎。</p>
+    <h3>Copilot版核心學習目標</h3>
+    <p>熟悉資料前處理與模型訓練流程，具備實作能力：標準化、正規化、資料重抽樣、Z-score、Min-Max。</p>
+    <div class="link-card">
+      <a href="iPAS-Part2.html" target="_blank">Gemini 版圖卡</a>
+      <a href="Copilot-iPAS-Part2.html" target="_blank">Copilot 版圖卡</a>
+    </div>
+  </div>
 
-            <div class="overflow-x-auto shadow-md rounded-lg">
-                <table class="w-full data-table text-sm text-gray-700">
-                    <thead class="table-header-bg text-xs uppercase text-gray-800">
-                        <tr>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">核心概念</div></th>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">知識點 (粗體強調)</div></th>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">情境判斷與白話比喻</div></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-white border-b hover:bg-gray-50">
-                            <td><span class="key-emphasis">AI/ML 核心</span></td>
-                            <td>具備<span class="key-highlight-bg">**數據學習**</span>能力，目標是<span class="key-highlight-bg">**泛化**</span>（處理未見過數據）。</td>
-                            <td>像一位能<span class="key-emphasis">**不斷嚐試和改進**</span>口味的**自學廚師**。</td>
-                        </tr>
-                        <tr class="bg-gray-50 border-b hover:bg-gray-100">
-                            <td><span class="key-emphasis">傳統程式</span></td>
-                            <td>僅依賴<span class="key-highlight-bg">**預定義的固定規則**</span>、<span class="key-highlight-bg">**IF-THEN-ELSE**</span>邏輯。</td>
-                            <td>像一本**固定菜譜**，規則寫死，<span class="key-emphasis">**無法應對新情境**</span>。（*參樣題 1(A)*）</td>
-                        </tr>
-                        <tr class="bg-white hover:bg-gray-50">
-                            <td><span class="key-emphasis">延伸知識：RPA</span></td>
-                            <td><span class="key-highlight-bg">**RPA**</span>（機器人流程自動化）執行重複性、基於規則的任務，<span class="key-emphasis">**本質上不是 ML**</span>。</td>
-                            <td><span class="key-emphasis">**RPA**</span> 像是一個**自動按按鈕的機械手臂**。只有當其流程中嵌入 **CV/NLP 模組**時，該模組才是 AI。</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+  <!-- 階段三 -->
+  <div class="section">
+    <h2>階段三</h2>
+    <h3>Gemini版核心學習目標</h3>
+    <p>依據任務選擇演算法（分類/迴歸/聚類）；掌握 SGD、Batch Size、學習率與優化器運作。</p>
+    <h3>Copilot版核心學習目標</h3>
+    <p>資料分割、模型建立與預測；掌握 Adagrad、交叉驗證、正則化與過擬合控制。</p>
+    <div class="link-card">
+      <a href="iPAS-Part3.html" target="_blank">Gemini 版圖卡</a>
+      <a href="Copilot-iPAS-Part3.html" target="_blank">Copilot 版圖卡</a>
+    </div>
+  </div>
 
-            <h3 class="text-2xl font-semibold color-sub-header mt-10 mb-4">🗣️ 2. 自然語言處理 (NLP)：從詞彙到語義表徵</h3>
-            <p class="text-gray-600 mb-4">NLP 是人機互動的關鍵。掌握 TF-IDF 和現代向量化方法的差異是重點。</p>
+  <!-- 階段四 -->
+  <div class="section">
+    <h2>階段四</h2>
+    <h3>Gemini版核心學習目標</h3>
+    <p>掌握 Train-Test Split、過度擬合診斷；熟悉 F1、Recall、Precision、R²、MSE 等評估指標。</p>
+    <h3>Copilot版核心學習目標</h3>
+    <p>理解 ML 核心原理與深度學習架構，強化模型選型能力：Logistic Regression、R²、F1、DBSCAN、K-Means、PCA、CNN、RNN、ResNet、Inception。</p>
+    <div class="link-card">
+      <a href="iPAS-Part4.html" target="_blank">Gemini 版圖卡</a>
+      <a href="Copilot-iPAS-Part4.html" target="_blank">Copilot 版圖卡</a>
+    </div>
+  </div>
 
-            <div class="overflow-x-auto shadow-md rounded-lg">
-                <table class="w-full data-table text-sm text-gray-700">
-                    <thead class="table-header-bg text-xs uppercase text-gray-800">
-                        <tr>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">步驟</div></th>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">技術 / 公式</div></th>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">應用與延伸知識</div></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-white border-b hover:bg-gray-50">
-                            <td><span class="key-emphasis">斷詞 (L21-1)</span></td>
-                            <td>**Tokenization**</td>
-                            <td>將句子切分為最小語義單元。（*參樣題 2(C)*）</td>
-                        </tr>
-                        <tr class="bg-gray-50 border-b hover:bg-gray-100">
-                            <td><span class="key-emphasis">舊式表徵</span></td>
-                            <td>**TF-IDF (重要性指標)**</td>
-                            <td>衡量詞彙在文件中的<span class="key-highlight-bg">**相對重要性**</span>，<span class="key-emphasis">**不含語義信息**</span>。
-                                <div class="formula-bg p-2 my-2 rounded text-center text-sm">
-                                    $$TFIDF(t, d) = TF(t, d) \times IDF(t)$$
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="bg-white border-b hover:bg-gray-50">
-                            <td><span class="key-emphasis">現代語義</span></td>
-                            <td><span class="key-highlight-bg">**Word2Vec / BERT**</span></td>
-                            <td>將文字轉為<span class="key-highlight-bg">**語義向量**</span>。<span class="key-emphasis">**BERT**</span> 採用 **Contextual Embedding**，能夠根據<span class="key-highlight-bg">**上下文**</span>調整詞彙向量，<span class="key-emphasis">**解決多義詞問題**</span>。</td>
-                        </tr>
-                        <tr class="bg-gray-50 hover:bg-gray-100">
-                            <td><span class="key-emphasis">核心應用</span></td>
-                            <td>**意圖識別、情緒分析**</td>
-                            <td><span class="key-highlight-bg">**客服機器人**</span>需準確進行<span class="key-emphasis">**意圖識別**</span>；<span class="key-highlight-bg">**輿情監測**</span>需進行<span class="key-emphasis">**情緒分析**</span>。</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- 圖卡 #2 內容 -->
-        <section id="card2" class="bg-white p-6 rounded-xl shadow-xl mb-10">
-            <h2 class="text-3xl font-bold color-section-title border-b-2 border-red-300 pb-3 mb-6">🖼️ 圖卡 #2：CV、生成式 AI 與風險治理</h2>
-            
-            <h3 class="text-2xl font-semibold color-sub-header mt-8 mb-4">👁️ 1. 電腦視覺 (CV)：任務與部署策略</h3>
-            <p class="text-gray-600 mb-4">CV 模型架構以 <span class="key-emphasis">**CNN (卷積神經網路)**</span> 為核心。選擇模型時必須考量精度需求和數據量。</p>
-
-            <div class="overflow-x-auto shadow-md rounded-lg">
-                <table class="w-full data-table text-sm text-gray-700">
-                    <thead class="table-header-bg text-xs uppercase text-gray-800">
-                        <tr>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">CV 應用類型</div></th>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">輸出與精度</div></th>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">實務情境</div></th>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">延伸知識：模型策略</div></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-white border-b hover:bg-gray-50">
-                            <td><span class="key-emphasis">物件偵測</span></td>
-                            <td>類別 + <span class="key-highlight-bg">**邊界框**</span> (Bounding Box)</td>
-                            <td>自駕車偵測行人、工廠瑕疵檢測。</td>
-                            <td>需要高<span class="key-highlight-bg">**召回率**</span> (Recall) 以避免漏判（FN）。</td>
-                        </tr>
-                        <tr class="bg-gray-50 border-b hover:bg-gray-100">
-                            <td><span class="key-emphasis">語義分割</span></td>
-                            <td><span class="key-highlight-bg">**像素級**</span>的類別標籤</td>
-                            <td>醫療影像、精準農業作物區域劃分。</td>
-                            <td><span class="key-emphasis">運算需求高</span>，數據標註成本極高。</td>
-                        </tr>
-                        <tr class="bg-white hover:bg-gray-50">
-                            <td><span class="key-emphasis">技術策略</span></td>
-                            <td><span class="key-highlight-bg">**遷移學習** (Transfer Learning)</span></td>
-                            <td>當公司圖像數據<span class="key-emphasis">**不足**</span>或<span class="key-emphasis">**缺乏算力**</span>時，應優先採用此策略。</td>
-                            <td>使用在大規模通用數據集上訓練好的模型權重作為初始化。</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3 class="text-2xl font-semibold color-sub-header mt-10 mb-4">💡 2. 生成式 AI 與多模態的風險與對策</h3>
-            <p class="text-gray-600 mb-4">生成式 AI 的應用價值高，但其特有的 <span class="key-emphasis">**幻覺問題**</span> 是部署前的最大風險點。</p>
-            
-            <div class="overflow-x-auto shadow-md rounded-lg">
-                <table class="w-full data-table text-sm text-gray-700">
-                    <thead class="table-header-bg text-xs uppercase text-gray-800">
-                        <tr>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">概念</div></th>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">核心機制</div></th>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">實務應對策略</div></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-white border-b hover:bg-gray-50">
-                            <td><span class="key-emphasis">幻覺問題</span> (Hallucination)</td>
-                            <td>LLM 產生<span class="key-highlight-bg">**聽起來合理但事實錯誤**</span>的資訊。</td>
-                            <td><span class="key-emphasis">**RAG (Retrieval-Augmented Generation)**</span>：模型先從<span class="key-highlight-bg">**企業專屬知識庫**</span>中<span class="key-emphasis">**檢索**</span>事實。</td>
-                        </tr>
-                        <tr class="bg-gray-50 hover:bg-gray-100">
-                            <td><span class="key-emphasis">多模態 AI</span> (L21-1)</td>
-                            <td>涉及<span class="key-highlight-bg">**兩種或兩種以上**</span>的數據類型（文本、圖像、聲音）。</td>
-                            <td><span class="key-highlight-bg">**白話比喻**</span>：一個能**看著圖畫**，並寫出**詩歌**的 AI。</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- 圖卡 #3 內容 -->
-        <section id="card3" class="bg-white p-6 rounded-xl shadow-xl mb-10">
-            <h2 class="text-3xl font-bold color-section-title border-b-2 border-red-300 pb-3 mb-6">📈 圖卡 #3：AI 專案策略與成本效益分析</h2>
-            
-            <h3 class="text-2xl font-semibold color-sub-header mt-8 mb-4">💰 1. AI 決策流程：痛點、標竿與權衡</h3>
-            <p class="text-gray-600 mb-4">專案決策必須以商業價值為導向，並理解模型複雜度與誤差之間的權衡。</p>
-
-            <div class="overflow-x-auto shadow-md rounded-lg">
-                <table class="w-full data-table text-sm text-gray-700">
-                    <thead class="table-header-bg text-xs uppercase text-gray-800">
-                        <tr>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">策略項目</div></th>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">決策核心</div></th>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">延伸知識：Bias-Variance 權衡</div></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-white border-b hover:bg-gray-50">
-                            <td><span class="key-emphasis">決策關鍵</span></td>
-                            <td>優先解決業務流程中<span class="key-highlight-bg">**成本最高**</span>、<span class="key-highlight-bg">**效率最低**</span>的環節。</td>
-                            <td>模型性能必須優於<span class="key-emphasis">**現有人工流程 (Baseline)**</span>。</td>
-                        </tr>
-                        <tr class="bg-gray-50 border-b hover:bg-gray-100">
-                            <td><span class="key-emphasis">核心公式</span></td>
-                            <td><span class="key-highlight-bg">**Bias-Variance Trade-off**</span></td>
-                            <td>
-                                <div class="formula-bg p-2 my-2 rounded text-center text-sm">
-                                    $$Error \approx Bias^2 + Variance$$
-                                </div>
-                                <span class="key-emphasis">**高偏差**</span>（欠擬合） vs. <span class="key-emphasis">**高方差**</span>（過度擬合）。
-                            </td>
-                        </tr>
-                        <tr class="bg-white hover:bg-gray-50">
-                            <td><span class="key-emphasis">情境題應對</span></td>
-                            <td><span class="key-highlight-bg">**可解釋性**</span>的考量</td>
-                            <td>在金融信用評分中，應優先選擇<span class="key-emphasis">**可解釋性高**</span>的模型。（*參樣題 4(B)*）</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3 class="text-2xl font-semibold color-sub-header mt-10 mb-4">💵 2. 成本效益分析：ROI 與 TCO 的深入計算</h3>
-            <p class="text-gray-600 mb-4">考試常考 TCO 的隱藏成本，尤其是後續的運維費用和數據標註費用。</p>
-
-            <div class="formula-bg p-3 my-4 rounded text-center text-sm shadow-inner max-w-xl mx-auto">
-                <span class="key-emphasis">ROI (投資回報率) 公式：</span>
-                $$\text{ROI} = \frac{(\text{專案帶來的總效益} - \text{總成本})}{\text{總成本}} \times 100\%$$
-            </div>
-            
-            <div class="overflow-x-auto shadow-md rounded-lg mt-6">
-                <table class="w-full data-table text-sm text-gray-700">
-                    <thead class="table-header-bg text-xs uppercase text-gray-800">
-                        <tr>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">TCO 成本類別</div></th>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">實際支出細節 (隱藏項)</div></th>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">情境題應對思路</div></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-white border-b hover:bg-gray-50">
-                            <td><span class="key-emphasis">數據成本</span></td>
-                            <td><span class="key-highlight-bg">**人工標註**</span> (開發階段最高成本)、數據清洗。</td>
-                            <td><span class="key-emphasis">**數據標註成本**</span>是 TCO 的**隱藏殺手**。</td>
-                        </tr>
-                        <tr class="bg-gray-50 border-b hover:bg-gray-100">
-                            <td><span class="key-emphasis">運算成本</span></td>
-                            <td>GPU/TPU 訓練費用、<span class="key-highlight-bg">**長期推論 (Inference) 服務**</span>的雲端費用。</td>
-                            <td><span class="key-emphasis">**推論費用**</span>（模型上線後持續發生）通常比訓練費用**更高**。</td>
-                        </tr>
-                        <tr class="bg-white hover:bg-gray-50">
-                            <td><span class="key-emphasis">維護成本</span></td>
-                            <td><span class="key-highlight-bg">**模型監控**</span>、<span class="key-highlight-bg">**模型漂移修正**</span>（重新訓練費用）。</td>
-                            <td>這是 <span class="key-emphasis">**MLOps**</span> 階段持續發生的**維護性成本**。</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- 圖卡 #4 內容 -->
-        <section id="card4" class="bg-white p-6 rounded-xl shadow-xl mb-10">
-            <h2 class="text-3xl font-bold color-section-title border-b-2 border-red-300 pb-3 mb-6">🛡️ 圖卡 #4：MLOps、治理與風險管理深度</h2>
-            
-            <h3 class="text-2xl font-semibold color-sub-header mt-8 mb-4">⚙️ 1. MLOps：部署環境與效率 (L21-3)</h3>
-            <p class="text-gray-600 mb-4">MLOps 旨在實現 AI 模型的自動化開發、部署與持續維運。環境選擇是關鍵決策。</p>
-
-            <div class="overflow-x-auto shadow-md rounded-lg">
-                <table class="w-full data-table text-sm text-gray-700">
-                    <thead class="table-header-bg text-xs uppercase text-gray-800">
-                        <tr>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">部署環境</div></th>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">應用情境</div></th>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">優勢 / 考量</div></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-white border-b hover:bg-gray-50">
-                            <td><span class="key-emphasis">雲端 (Cloud)</span></td>
-                            <td>大模型訓練、高吞吐量 API 服務。</td>
-                            <td>算力彈性高。<span class="key-highlight-bg">**劣勢：高延遲**</span>（受網絡影響）、**高運行成本**。</td>
-                        </tr>
-                        <tr class="bg-gray-50 border-b hover:bg-gray-100">
-                            <td><span class="key-emphasis">邊緣 (Edge)</span></td>
-                            <td><span class="key-highlight-bg">**即時性**</span>要求高（工廠檢測）、數據隱私敏感。</td>
-                            <td><span class="key-emphasis">**優勢：低延遲**</span>、**保護隱私**。<span class="key-highlight-bg">**考量：模型必須輕量化**</span>，資源受限。（*參樣題 8(B)*）</td>
-                        </tr>
-                        <tr class="bg-white hover:bg-gray-50">
-                            <td><span class="key-emphasis">核心技術</span></td>
-                            <td>**容器化 (Docker/K8s)**</td>
-                            <td>確保模型運行環境的<span class="key-highlight-bg">**一致性**</span>，促進<span class="key-emphasis">**跨平台部署**</span>。（*參樣題 6(C)*）</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3 class="text-2xl font-semibold color-sub-header mt-10 mb-4">🚨 2. AI 治理、隱私保護與風險 (L21-4)</h3>
-            <p class="text-gray-600 mb-4">法律法規和倫理風險是 AI 專案必須考量的生命線。</p>
-
-            <div class="overflow-x-auto shadow-md rounded-lg">
-                <table class="w-full data-table text-sm text-gray-700">
-                    <thead class="table-header-bg text-xs uppercase text-gray-800">
-                        <tr>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">概念</div></th>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">核心內容</div></th>
-                            <th scope="col" class="py-3 px-6"><div class="key-emphasis">延伸技術與風險</div></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-white border-b hover:bg-gray-50">
-                            <td><span class="key-emphasis">GDPR 核心權利</span></td>
-                            <td><span class="key-highlight-bg">**被遺忘權 (Right to be Forgotten)**</span></td>
-                            <td>資料主體有權在符合條件下請求<span class="key-emphasis">**刪除**</span>其個人資料。（*參樣題 12(B)*）</td>
-                        </tr>
-                        <tr class="bg-gray-50 border-b hover:bg-gray-100">
-                            <td><span class="key-emphasis">隱私技術 (PET)</span></td>
-                            <td>**差分隱私** (增加噪音)</td>
-                            <td>**同態加密** (加密狀態下計算)。<span class="key-highlight-bg">**白話比喻**</span>：發布數據時**故意加入一點點模糊**。</td>
-                        </tr>
-                        <tr class="bg-white hover:bg-gray-50">
-                            <td><span class="key-emphasis">系統級風險</span></td>
-                            <td><span class="key-highlight-bg">**供應鏈攻擊**</span></td>
-                            <td>惡意內容植入<span class="key-emphasis">**第三方開源模型/函式庫**</span>中。</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <footer class="text-center text-gray-500 py-6 mt-8 border-t border-gray-300">
-            <p>講義內容已調整為靜態滾動模式，無需 JavaScript 即可完整瀏覽。</p>
-        </footer>
-    </main>
+  <!-- 階段五 -->
+  <div class="section">
+    <h2>階段五</h2>
+    <h3>Gemini版核心學習目標</h3>
+    <p>學習模型部署、系統集成與持續監控；掌握 GDPR、演算法偏見、供應鏈攻擊等風險與合規議題。</p>
+    <h3>Copilot版核心學習目標</h3>
+    <p>理解 AI 系統風險與倫理議題，具備合規意識：供應鏈攻擊、模型風險、資料偏誤、公平性評估、GDPR（被遺忘權、資料最小化）。</p>
+    <div class="link-card">
+      <a href="iPAS-Part5.html" target="_blank">Gemini 版圖卡</a>
+      <a href="Copilot-iPAS-Part5.html" target="_blank">Copilot 版圖卡</a>
+    </div>
+  </div>
 
 </body>
 </html>
